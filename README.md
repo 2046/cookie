@@ -31,7 +31,7 @@ require(['cookie'], function(cookie){
 获取 cookie 的值，如果要获取的 cookie 值不存在，则返回 undefined。
 
 - name **{{String}}** 要获取的 cookie 的名称，必填
-- options **{{Object}}** 附加属性，可选，取值如下：
+- options **{{Object}}** 配置选项，可选，取值如下：
   - raw  **{{Boolean}}** 是否对获取到的 cookie 值进行 URI 解码，值为真时，不会进行 URI 解码
   - converter **{{Function}}** 对获取的 cookie 值进行转换，如果所获取的 cookie 有值，会在返回前传给 converter 函数进行转换
 
@@ -52,7 +52,7 @@ console.log(cookie.get('foo', {
 
 - name **{{String}}** 要设置的 cookie 的名称，必填
 - value **{{String}}** 要设置的 cookie 的值，必填
-- options **{{Object}}** 附加属性，可选，取值如下：
+- options **{{Object}}** 配置选项，可选，取值如下：
   - path **{{String}}** 设置存储 cookie 的所属路径
   - domain **{{String}}** 设置存储 cookie 的所属域
   - secure **{{Boolean}}** 设置存储的 cookie 信息只能从一个安全的环境中进行访问
@@ -76,7 +76,7 @@ cookie.set('bar', 4, {
 删除一个 cookie。
 
 - name **{{String}}** 要删除的 cookie 的名称，必填
-- options **{{Object}}** 附加属性，可选，跟 set 方法的 options 取值一样
+- options **{{Object}}** 配置选项，可选，跟 set 方法的 options 取值一样
 
 ```
 var cookie = require('cookie');
