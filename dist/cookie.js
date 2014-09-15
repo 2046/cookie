@@ -10,14 +10,8 @@ define(function(require, exports, module){
     encode = encodeURIComponent;
     
     exports.get = function(key, opt){
-        validateCookieName(key);
-    
         opt = opt || {};
-    
-        if(typeof opt === 'function'){
-            opt = {converter : opt};
-        }
-    
+        validateCookieName(key);
         return (opt.converter || same)(parseCookieString(document.cookie, !opt.raw)[key]);
     };
     

@@ -31,6 +31,17 @@ require(['cookie'], function(cookie){
 获取 cookie 的值，如果要获取的 cookie 值不存在，则返回 undefined。
 
 - name **{{String}}** 要获取的 cookie 的名称，必填
-- options **{{Object}}** 铺助参数，取值如下，可选
+- options **{{Object}}** 铺助参数，可选，取值如下：
   - raw  **{{Boolean}}** 当有 raw 参数，且值为真时，不会对获取到的 cookie 值进行 URI 解码
   - converter **{{Function}}** 当有 converter 参数，且值为函数时，如果所获取的 cookie 有值，会在返回前传给 converter 函数进行转换
+
+```
+var cookie = require('cookie');
+
+cookie.set('foo', '1')
+cookie.get('foo', {
+    converter : function(s){
+        return parseInt(s);
+    }
+})
+```
