@@ -56,7 +56,7 @@ console.log(cookie.get('foo', {
   - raw **{{Boolean}}** 是否对设置的 cookie 值进行 URI 编码，值为真时，不会进行 URI 编码
   - path **{{String}}** 设置存储 cookie 的所属路径
   - domain **{{String}}** 设置存储 cookie 的所属域
-  - expires **{{Number|Date}}** 设置存储 cookie 的过期时间，如果设置为 0，则浏览器关闭 cookie 将被删除
+  - expires **{{Number|Date}}** 设置存储 cookie 的过期时间，如果设置为 0，则浏览器关闭时 cookie 将被删除
   - secure **{{Boolean}}** 设置存储的 cookie 信息只能从一个安全的环境中进行访问
 
 ```
@@ -76,7 +76,7 @@ cookie.set('bar', 4, {
 删除一个 cookie。
 
 - name **{{String}}** 要删除的 cookie 的名称，必填
-- options **{{Object}}** 附加属性，跟 set 方法的 options 取值一样
+- options **{{Object}}** 附加属性，可选，跟 set 方法的 options 取值一样
 
 ```
 var cookie = require('cookie');
