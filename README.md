@@ -53,11 +53,11 @@ console.log(cookie.get('foo', {
 - name **{{String}}** 要设置的 cookie 的名称，必填
 - value **{{String}}** 要设置的 cookie 的值，必填
 - options **{{Object}}** 附加属性，可选，取值如下：
-  - raw **{{Boolean}}** 是否对设置的 cookie 值进行 URI 编码，值为真时，不会进行 URI 编码
   - path **{{String}}** 设置存储 cookie 的所属路径
   - domain **{{String}}** 设置存储 cookie 的所属域
-  - expires **{{Number|Date}}** 设置存储 cookie 的过期时间，如果设置为 0，则浏览器关闭时 cookie 将被删除
   - secure **{{Boolean}}** 设置存储的 cookie 信息只能从一个安全的环境中进行访问
+   - raw **{{Boolean}}** 是否对设置的 cookie 值进行 URI 编码，值为真时，不会进行 URI 编码
+  - expires **{{Number|Date}}** 设置存储 cookie 的过期时间，如果设置为 0，则浏览器关闭时 cookie 将被删除
 
 ```
 var cookie = require('cookie');
